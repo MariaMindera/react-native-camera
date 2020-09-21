@@ -184,6 +184,7 @@ export interface RNCameraProps {
   whiteBalance?: keyof WhiteBalance | CustomWhiteBalance;
   captureAudio?: boolean;
 
+  onColorDetected?(response: {color : {r:number, g:number, b:number}}): void; 
   onCameraReady?(): void;
   onStatusChange?(event: {
     cameraStatus: keyof CameraStatus;
